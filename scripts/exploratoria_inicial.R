@@ -97,3 +97,10 @@ dados |> ggplot(aes(x = area, y = densidade)) +
        y = 'Densidade de folhas', 
        caption = 'Fonte: Autores (2022)')
 
+#distribuições das variáveis resposta
+
+dadosTrat = dados |> filter(densidade < 0.2) 
+
+hist(dadosTrat$densidade, col = "chocolate")
+hist(dados$contagem, col = "chocolate")
+#hist(dados$sombra, col = "chocolate")
